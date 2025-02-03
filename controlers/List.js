@@ -7,7 +7,7 @@ const {cloudinary}=require("../cloudJs")
 
 module.exports.AllList=wrapasync(async(req,res)=>{
     let allLists=await List.find({});
-    res.status(200).json({allLists,'user':req.user,req.session});
+    res.status(200).json({allLists,'user':req});
   })
 
 module.exports.NewList=wrapasync(async(req,res,next)=>{
